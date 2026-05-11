@@ -540,7 +540,7 @@
     entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   reveals.forEach(r => io.observe(r));
-
+ 
   const bnav = document.querySelectorAll('.bnav-item');
   const sections = ['hero','video','services','contact'];
   window.addEventListener('scroll', () => {
