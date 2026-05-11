@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSO Marketing Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:#0d0d1a;color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+:root{
+  --g1:linear-gradient(135deg,#667eea,#764ba2);
+  --g2:linear-gradient(135deg,#764ba2,#f093fb);
+  --card:#1a1a35;
+  --border:rgba(102,126,234,0.2);
+  --muted:rgba(255,255,255,0.55);
+  --purple:#a78bfa;
+}
+
+.b1,.b2{position:fixed;border-radius:50%;pointer-events:none;z-index:0;filter:blur(70px)}
+.b1{width:300px;height:300px;top:-80px;right:-80px;background:radial-gradient(circle,rgba(102,126,234,.2),transparent 70%)}
+.b2{width:250px;height:250px;bottom:20%;left:-60px;background:radial-gradient(circle,rgba(118,75,162,.18),transparent 70%)}
+
+/* ── STICKY TOP NAV ── */
+header{
+  position:sticky;top:0;z-index:100;
+  height:52px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 16px;
+  background:rgba(13,13,26,.92);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.logo{
+  font-family:'Syne',sans-serif;font-size:20px;font-weight:800;
+  background:var(--g1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-link{color:var(--muted);font-size:13px;font-weight:500;text-decoration:none}
+.nav-call{
+  display:flex;align-items:center;gap:5px;
+  background:var(--g1);color:#fff;border:none;
+  font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;
+  padding:8px 16px;border-radius:50px;text-decoration:none;
+}
+@media(max-width:420px){.nav-link{display:none}}
+
+/* ── SECTIONS ── */
+main{position:relative;z-index:1}
+
+/* HERO */
+#hero{
+  min-height:calc(100svh - 52px);
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;padding:40px 20px;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(102,126,234,.12);border:1px solid rgba(102,126,234,.3);
+  color:var(--purple);font-size:11px;font-weight:600;
+  letter-spacing:1.5px;text-transform:uppercase;
+  padding:6px 14px;border-radius:50px;margin-bottom:22px;
+}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--purple);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.4)}}
+
+h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(30px,8vw,54px);font-weight:800;line-height:1.1;
+  margin-bottom:14px;letter-spacing:-0.5px;
+}
+.grad{background:var(--g2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sub{font-size:15px;color:var(--muted);line-height:1.7;max-width:310px;margin:0 auto 28px}
+
+.btns{display:flex;flex-direction:column;gap:11px;width:100%;max-width:260px}
+.btn-main{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--g1);color:#fff;border:none;
+  font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;
+  padding:15px 24px;border-radius:50px;text-decoration:none;
+  box-shadow:0 8px 28px rgba(102,126,234,.35);
+}
+.btn-sec{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  background:transparent;color:#fff;border:1px solid rgba(255,255,255,.15);
+  font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:500;
+  padding:14px 24px;border-radius:50px;text-decoration:none;
+}
+
+.stats{
+  display:flex;width:100%;max-width:290px;margin-top:36px;
+  border:1px solid var(--border);border-radius:18px;overflow:hidden;
+  background:rgba(26,26,53,.5);
+}
+.st{flex:1;padding:15px 8px;text-align:center}
+.st+.st{border-left:1px solid var(--border)}
+.st-n{
+  font-family:'Syne',sans-serif;font-size:19px;font-weight:800;
+  background:var(--g1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.st-l{font-size:10px;color:var(--muted);margin-top:2px}
+
+/* VIDEO */
+#video{padding:56px 20px;text-align:center}
+.sec-tag{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--purple);margin-bottom:10px}
+h2{font-family:'Syne',sans-serif;font-size:clamp(22px,5vw,30px);font-weight:800;margin-bottom:26px;line-height:1.2}
+.vid-wrap{
+  position:relative;border-radius:20px;overflow:hidden;
+  background:var(--card);border:1px solid var(--border);
+  max-width:360px;margin:0 auto;
+  box-shadow:0 16px 48px rgba(0,0,0,.4);
+}
+.vid-wrap iframe{width:100%;aspect-ratio:9/16;border:none;display:block}
+.vid-glow{position:absolute;inset:-2px;border-radius:20px;background:var(--g1);z-index:-1;opacity:.3;filter:blur(16px)}
+
+/* SERVICES */
+#services{padding:56px 20px;text-align:center}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:380px;margin:0 auto}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:16px 14px;text-align:left}
+.card.full{grid-column:span 2}
+.icon{width:38px;height:38px;border-radius:12px;background:rgba(102,126,234,.14);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:10px}
+.c-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px}
+.c-desc{font-size:12px;color:var(--muted);line-height:1.5}
+
+/* ABOUT */
+#about{padding:56px 20px}
+.about-box{
+  max-width:380px;margin:0 auto;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:22px;padding:22px 18px;
+  position:relative;overflow:hidden;
+}
+.about-box::after{content:'';position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(102,126,234,.15),transparent 70%)}
+.a-logo{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;background:var(--g1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
+.a-text{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.tag{background:rgba(102,126,234,.1);border:1px solid rgba(102,126,234,.25);color:var(--purple);font-size:11px;font-weight:600;padding:4px 11px;border-radius:50px}
+.loc{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.loc-dot{width:8px;height:8px;border-radius:50%;background:var(--g1)}
+
+/* CONTACT */
+#contact{padding:56px 20px 60px}
+.contact-box{
+  max-width:380px;margin:0 auto;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:24px;padding:30px 18px;
+  text-align:center;position:relative;overflow:hidden;
+}
+.contact-box::before{content:'';position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:180px;height:180px;background:radial-gradient(circle,rgba(118,75,162,.25),transparent 70%)}
+.ce{font-size:34px;margin-bottom:12px}
+.ct{font-family:'Syne',sans-serif;font-size:21px;font-weight:800;margin-bottom:8px}
+.cs{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:22px}
+.btn-call{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--g1);color:#fff;border:none;
+  font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;
+  padding:16px 24px;border-radius:50px;text-decoration:none;width:100%;
+  box-shadow:0 8px 30px rgba(102,126,234,.4);
+  animation:glow 3s ease-in-out infinite;
+}
+@keyframes glow{0%,100%{box-shadow:0 8px 30px rgba(102,126,234,.4)}50%{box-shadow:0 8px 44px rgba(118,75,162,.65)}}
+.btn-ig{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  background:transparent;color:#fff;border:1px solid rgba(255,255,255,.14);
+  font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:500;
+  padding:13px 24px;border-radius:50px;text-decoration:none;width:100%;margin-top:10px;
+}
+.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700}
+.phone{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:16px;font-size:13px;color:var(--muted)}
+.phone b{color:var(--purple);font-weight:600;letter-spacing:.5px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="b1"></div>
+<div class="b2"></div>
+
+<header>
+  <div class="logo">MSO</div>
+  <div class="nav-right">
+    <a href="#services" class="nav-link">Xizmatlar</a>
+    <a href="#contact" class="nav-link">Aloqa</a>
+    <a href="tel:+998502255891" class="nav-call">📞 Qo'ngiroq</a>
+  </div>
+</header>
+
+<main>
+
+<section id="hero">
+  <div class="badge"><span class="dot"></span>Samarqand · Marketing Agency</div>
+  <h1>Biznesingizni<br><span class="grad">Yangi Bosqichga</span><br>Olib Chiqamiz</h1>
+  <p class="sub">Strategik marketing — real natijalar bilan. SMM, Kontent va Reklama xizmatlari.</p>
+  <div class="btns">
+    <a href="tel:+998502255891" class="btn-main">📞 Bog'lanish</a>
+    <a href="https://www.instagram.com/mso.marketing" target="_blank" class="btn-sec">📸 Instagram</a>
+  </div>
+  <div class="stats">
+    <div class="st"><div class="st-n">1+</div><div class="st-l">Yil tajriba</div></div>
+    <div class="st"><div class="st-n">SMM</div><div class="st-l">Kontent</div></div>
+    <div class="st"><div class="st-n">100%</div><div class="st-l">Natija</div></div>
+  </div>
+</section>
+
+<section id="video" class="reveal">
+  <p class="sec-tag">Bizning ish</p>
+  <h2>Kontent Namunasi</h2>
+  <div class="vid-wrap">
+    <div class="vid-glow"></div>
+    <iframe src="https://www.instagram.com/reel/DT0u3eajNi2/embed"
+      allowfullscreen scrolling="no"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture">
+    </iframe>
+  </div>
+</section>
+
+<section id="services" class="reveal">
+  <p class="sec-tag">Xizmatlar</p>
+  <h2>Nima Qilamiz</h2>
+  <div class="grid">
+    <div class="card"><div class="icon">📱</div><div class="c-name">SMM</div><div class="c-desc">Ijtimoiy tarmoqlarda professional boshqaruv</div></div>
+    <div class="card"><div class="icon">🎬</div><div class="c-name">Kontent</div><div class="c-desc">Video va foto kontent yaratish</div></div>
+    <div class="card"><div class="icon">📣</div><div class="c-name">Reklama</div><div class="c-desc">Maqsadli reklama kampaniyalari</div></div>
+    <div class="card"><div class="icon">📊</div><div class="c-name">Strategiya</div><div class="c-desc">Marketing strategiyasi ishlab chiqish</div></div>
+    <div class="card full"><div class="icon">🎯</div><div class="c-name">Real Natijalar</div><div class="c-desc">Har bir loyiha uchun o'lchanadigan natijalar — subscriberlar, savdolar va brend tanilishi.</div></div>
+  </div>
+</section>
+
+<section id="about" class="reveal">
+  <p class="sec-tag" style="text-align:center">Biz haqimizda</p>
+  <h2 style="text-align:center">MSO Marketing</h2>
+  <div class="about-box">
+    <div class="a-logo">MSO</div>
+    <p class="a-text">1+ yillik tajriba bilan Samarqanddagi yetakchi marketing agentligi. Har bir mijoz uchun individual yondashuv va real natijalar.</p>
+    <div class="tags">
+      <span class="tag">SMM</span>
+      <span class="tag">Kontent</span>
+      <span class="tag">Reklama</span>
+      <span class="tag">Strategiya</span>
+      <span class="tag">1+ Yil Tajriba</span>
+    </div>
+    <div class="loc"><div class="loc-dot"></div>Samarqand, O'zbekiston</div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <div class="contact-box">
+    <div class="ce">🚀</div>
+    <div class="ct">Bog'laning Biz Bilan</div>
+    <p class="cs">Biznesingiz uchun strategik marketing kerakmi?<br>Hoziroq qo'ng'iroq qiling — bepul maslahat!</p>
+    <a href="tel:+998502255891" class="btn-call">📞 Qo'ngiroq Qilish</a>
+    <a href="https://www.instagram.com/mso.marketing" target="_blank" class="btn-ig">
+      <span class="ig">Instagram</span>ga O'tish →
+    </a>
+    <div class="phone">📱 <b>+998 50 225 58 91</b></div>
+  </div>
+</section>
+
+</main>
+
+<script>
+const io = new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
